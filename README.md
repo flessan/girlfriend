@@ -1,56 +1,57 @@
-# Welcome to your Expo app 👋
+# girlfriend
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A proactive AI companion for everyday conversations.
 
-## Get started
+girlfriend is designed to make AI companionship feel like casual messaging: a companion can remember context, continue conversations, and reach out first when proactive messaging is enabled.
 
-1. Install dependencies
+## Project status
 
-   ```bash
-   npm install
-   ```
+The repository currently contains the Expo mobile foundation and a local conversation UI preview.
 
-2. Start the app
+**The current preview does not call an AI provider.** Its sample replies are deterministic local responses. Authentication, provider APIs, persistent chat history, long-term memory, proactive scheduling, and push notifications are planned for later milestones.
 
-   ```bash
-   npx expo start
-   ```
+## Getting started
 
-In the output, you'll find options to open the app in a
+Requirements:
+- Node.js LTS
+- npm
+- Expo Go for a quick device preview, or an Android development build for native features as they are added
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Install dependencies:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+Start Expo:
 
-### Other setup steps
+```bash
+npx expo start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## Current foundation
 
-## Learn more
+- Expo SDK 58 and React Native
+- Expo Router
+- TypeScript
+- Mobile-first conversation layout
+- Keyboard-aware message composer
+- Local message preview with a typing state
+- Android, iOS, and web project targets
 
-To learn more about developing your project with Expo, look at the following resources:
+## Roadmap
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Chat foundation and conversation experience
+2. Companion personality and user-controlled memory
+3. Provider adapters and secure server-side model access
+4. Proactive messaging engine and scheduling
+5. Push notifications and background delivery
+6. Multi-platform polish
 
-## Join the community
+## Design reference
 
-Join our community of developers creating universal apps.
+The chat interaction patterns were informed by [EvanBacon/chat-template](https://github.com/EvanBacon/chat-template). This project keeps its existing Expo SDK 58 foundation and implements its own UI components rather than importing that template's SDK 56 dependency set.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## License
+
+MIT. See [LICENSE](LICENSE).
